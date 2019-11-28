@@ -68,7 +68,7 @@ mvn -f liquibase liquibase:update
 
 * Create new changelog file
 ```shell script
-touch liquibase/changelods/"$(date +"%Y%m%d%I%M%p")_<short_description>_.xml"
+touch liquibase/changelogs/"$(date +"%Y%m%d%I%M%p")_<short_description>_.xml"
 ```
 
 * Rollback last change
