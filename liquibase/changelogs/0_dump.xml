@@ -12,4 +12,12 @@
             <column name="surname" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
+    <changeSet author="pedroaugusto (generated)" id="1574949076384-1">
+        <insert tableName="users">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Pedro"/>
+            <column name="email" value="pedro.e@ufv.br"/>
+            <column name="surname" value="Silva"/>
+        </insert>
+    </changeSet>
 </databaseChangeLog>

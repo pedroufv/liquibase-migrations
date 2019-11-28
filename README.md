@@ -85,6 +85,15 @@ cd liquibase
 mvn -f liquibase liquibase:generateChangeLog -Dliquibase.outputChangeLogFile=liquibase/changelogs/0_dump.xml
 ```
 
+* Generate a ChangeLog from an Existing Database With Data
+```shell script
+## acess directory
+cd liquibase 
+
+## generate file with data
+mvn -f liquibase liquibase:generateChangeLog -Dliquibase.outputChangeLogFile=liquibase/changelogs/0_dump.xml -Dliquibase.diffTypes=data
+```
+
 * Mark all changes as executed in the database.
 ```shell script
 mvn -f liquibase liquibase:changelogSync -Dliquibase.changeLogFile=changelogs/0_dump.xml
