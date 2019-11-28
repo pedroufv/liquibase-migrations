@@ -6,5 +6,6 @@
 	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
 
 	<include file="changelogs/0_dump.xml"/>
+	<include file="changelogs/201911280144_seed_users_table.xml"/>
 
 </databaseChangeLog>
