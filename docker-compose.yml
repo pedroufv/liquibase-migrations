@@ -2,11 +2,23 @@ version: '3.7'
 services:
   mysql:
     image: mysql:5.7
+    restart: always
     container_name: liquibase-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=5ecurityP@ssword
-      - MYSQL_DATABASE=liquibase-create
+      - MYSQL_DATABASE=liquibase
     volumes:
       - ./docker/mysql:/var/lib/mysql
     ports:
       - 3306:3306
+  postgres:
+    image: postgres:latest
+    restart: always
+    container_name: liquibase-psql
+    environment:
+      - POSTGRES_PASSWORD=5ecurityP@ssword
+      - POSTGRES_DB=liquibase
+    ports:
+      - 5432:5432
+    volumes:
+      - ./docker/psql:/var/lib/postgresql/data

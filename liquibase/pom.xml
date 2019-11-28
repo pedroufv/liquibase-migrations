@@ -3,11 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ufv.br.liquibase-create</groupId>
-	<artifactId>liquibase-create</artifactId>
+	<groupId>ufv.br.liquibase-example</groupId>
+	<artifactId>liquibase-example</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
-	<name>liquibase-create</name>
+	<name>liquibase-example</name>
 
 	<dependencies>
 		<dependency>
@@ -19,6 +19,11 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.37</version>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.5</version>
 		</dependency>
 	</dependencies>
 
