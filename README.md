@@ -58,7 +58,7 @@ docker-composer up -d
 
 * Create and configure liquibase.properties
 ```shell script
-cp liquibase/liquibase.properties.dit liquibase/liquibase.properties
+cp liquibase/liquibase.properties.dist liquibase/liquibase.properties
 ```
 
 * Update database
@@ -72,24 +72,17 @@ touch liquibase/changelogs/"$(date +"%Y%m%d%I%M%p")_<short_description>_.xml"
 ```
 
 * Rollback last change
-```shell script
 mvn -f liquibase liquibase:rollback -Dliquibase.rollbackCount=1
 ```
 
 * Generate a ChangeLog from an Existing Database
 ```shell script
-## acess directory
-cd liquibase 
-
 ## generate file
 mvn -f liquibase liquibase:generateChangeLog -Dliquibase.outputChangeLogFile=liquibase/changelogs/0_dump.xml
 ```
 
 * Generate a ChangeLog from an Existing Database With Data
 ```shell script
-## acess directory
-cd liquibase 
-
 ## generate file with data
 mvn -f liquibase liquibase:generateChangeLog -Dliquibase.outputChangeLogFile=liquibase/changelogs/0_dump.xml -Dliquibase.diffTypes=data
 ```
