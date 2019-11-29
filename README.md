@@ -72,18 +72,17 @@ touch liquibase/changelogs/"$(date +"%Y%m%d%I%M%p")_<short_description>_.xml"
 ```
 
 * Rollback last change
+```shell script
 mvn -f liquibase liquibase:rollback -Dliquibase.rollbackCount=1
 ```
 
 * Generate a ChangeLog from an Existing Database
 ```shell script
-## generate file
 mvn -f liquibase liquibase:generateChangeLog -Dliquibase.outputChangeLogFile=liquibase/changelogs/0_dump.xml
 ```
 
-* Generate a ChangeLog from an Existing Database With Data
+* Generate a ChangeLog With Data from an Existing Database 
 ```shell script
-## generate file with data
 mvn -f liquibase liquibase:generateChangeLog -Dliquibase.outputChangeLogFile=liquibase/changelogs/0_dump.xml -Dliquibase.diffTypes=data
 ```
 
